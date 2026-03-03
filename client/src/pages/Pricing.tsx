@@ -26,7 +26,7 @@ const plans = [
   },
   {
     name: "Pro",
-    price: 29,
+    price: 580,
     period: "per month",
     description: "For serious learners ready to level up.",
     color: "bg-[#FF5733]",
@@ -45,7 +45,7 @@ const plans = [
   },
   {
     name: "Team",
-    price: 79,
+    price: 1580,
     period: "per month",
     description: "For teams and organizations scaling skills.",
     color: "bg-white",
@@ -261,7 +261,7 @@ export default function Pricing() {
             className="text-white font-extrabold text-lg"
             style={{ fontFamily: "Space Grotesk, sans-serif" }}
           >
-            💡 Save 40% with Annual Billing — Pro for just R17/month
+            💡 Save 40% with Annual Billing — Pro for just R340/month
           </p>
           <button
             className="mt-3 bg-white text-[#4A7C59] font-extrabold text-sm px-6 py-2 border-2 border-[#1A1A1A]"
