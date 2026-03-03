@@ -88,7 +88,9 @@ export default function Pricing() {
       {/* Header */}
       <div className="bg-[#FAFAF5] border-b-2 border-[#1A1A1A] py-16">
         <div className="container text-center">
-          <div className="section-tag text-[#FF5733] border-[#FF5733] mb-4 inline-block">Pricing</div>
+          <div className="section-tag text-[#FF5733] border-[#FF5733] mb-4 inline-block">
+            Pricing
+          </div>
           <h1
             className="text-5xl font-extrabold text-[#1A1A1A] leading-tight"
             style={{ fontFamily: "Space Grotesk, sans-serif" }}
@@ -96,7 +98,8 @@ export default function Pricing() {
             Simple, Transparent Pricing
           </h1>
           <p className="mt-4 text-gray-600 text-lg max-w-xl mx-auto">
-            No hidden fees. No surprises. Start free and upgrade when you're ready.
+            No hidden fees. No surprises. Start free and upgrade when you're
+            ready.
           </p>
         </div>
       </div>
@@ -104,17 +107,22 @@ export default function Pricing() {
       {/* Plans */}
       <div className="container py-16">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children">
-          {plans.map((plan) => (
+          {plans.map(plan => (
             <div
               key={plan.name}
               className={`border-2 border-[#1A1A1A] overflow-hidden ${plan.color} ${plan.name === "Pro" ? "relative" : ""}`}
               style={{
-                boxShadow: plan.name === "Pro" ? "8px 8px 0px #1A1A1A" : "4px 4px 0px #1A1A1A",
+                boxShadow:
+                  plan.name === "Pro"
+                    ? "8px 8px 0px #1A1A1A"
+                    : "4px 4px 0px #1A1A1A",
                 transform: plan.name === "Pro" ? "scale(1.02)" : "none",
               }}
             >
               {/* Header */}
-              <div className={`${plan.headerColor} border-b-2 border-[#1A1A1A] p-6`}>
+              <div
+                className={`${plan.headerColor} border-b-2 border-[#1A1A1A] p-6`}
+              >
                 {plan.badge && (
                   <div className="mb-3">
                     <span
@@ -126,8 +134,16 @@ export default function Pricing() {
                   </div>
                 )}
                 <h2
-                  className={`text-2xl font-extrabold ${plan.name === "Pro" || plan.name === "Team" && plan.headerColor === "bg-[#1A1A1A]" ? "text-white" : "text-[#1A1A1A]"}`}
-                  style={{ fontFamily: "Space Grotesk, sans-serif", color: plan.name === "Pro" ? "white" : plan.name === "Team" ? "white" : "#1A1A1A" }}
+                  className={`text-2xl font-extrabold ${plan.name === "Pro" || (plan.name === "Team" && plan.headerColor === "bg-[#1A1A1A]") ? "text-white" : "text-[#1A1A1A]"}`}
+                  style={{
+                    fontFamily: "Space Grotesk, sans-serif",
+                    color:
+                      plan.name === "Pro"
+                        ? "white"
+                        : plan.name === "Team"
+                          ? "white"
+                          : "#1A1A1A",
+                  }}
                 >
                   {plan.name}
                 </h2>
@@ -136,21 +152,40 @@ export default function Pricing() {
                     className="text-5xl font-extrabold"
                     style={{
                       fontFamily: "Space Grotesk, sans-serif",
-                      color: plan.name === "Pro" ? "white" : plan.name === "Team" ? "white" : "#1A1A1A",
+                      color:
+                        plan.name === "Pro"
+                          ? "white"
+                          : plan.name === "Team"
+                            ? "white"
+                            : "#1A1A1A",
                     }}
                   >
-                    ${plan.price}
+                    R{plan.price}
                   </span>
                   <span
                     className="text-sm font-medium"
-                    style={{ color: plan.name === "Pro" ? "rgba(255,255,255,0.8)" : plan.name === "Team" ? "rgba(255,255,255,0.7)" : "#6B7280" }}
+                    style={{
+                      color:
+                        plan.name === "Pro"
+                          ? "rgba(255,255,255,0.8)"
+                          : plan.name === "Team"
+                            ? "rgba(255,255,255,0.7)"
+                            : "#6B7280",
+                    }}
                   >
                     /{plan.period}
                   </span>
                 </div>
                 <p
                   className="mt-2 text-sm"
-                  style={{ color: plan.name === "Pro" ? "rgba(255,255,255,0.85)" : plan.name === "Team" ? "rgba(255,255,255,0.7)" : "#6B7280" }}
+                  style={{
+                    color:
+                      plan.name === "Pro"
+                        ? "rgba(255,255,255,0.85)"
+                        : plan.name === "Team"
+                          ? "rgba(255,255,255,0.7)"
+                          : "#6B7280",
+                  }}
                 >
                   {plan.description}
                 </p>
@@ -166,7 +201,9 @@ export default function Pricing() {
                       ) : (
                         <X className="w-5 h-5 text-gray-300 shrink-0" />
                       )}
-                      <span className={`text-sm ${included ? "text-[#1A1A1A]" : "text-gray-400"}`}>
+                      <span
+                        className={`text-sm ${included ? "text-[#1A1A1A]" : "text-gray-400"}`}
+                      >
                         {text}
                       </span>
                     </li>
@@ -180,17 +217,23 @@ export default function Pricing() {
                     boxShadow: "3px 3px 0px #1A1A1A",
                     transition: "box-shadow 0.1s ease, transform 0.1s ease",
                   }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLElement).style.boxShadow = "5px 5px 0px #1A1A1A";
-                    (e.currentTarget as HTMLElement).style.transform = "translate(-2px, -2px)";
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLElement).style.boxShadow =
+                      "5px 5px 0px #1A1A1A";
+                    (e.currentTarget as HTMLElement).style.transform =
+                      "translate(-2px, -2px)";
                   }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLElement).style.boxShadow = "3px 3px 0px #1A1A1A";
-                    (e.currentTarget as HTMLElement).style.transform = "translate(0, 0)";
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLElement).style.boxShadow =
+                      "3px 3px 0px #1A1A1A";
+                    (e.currentTarget as HTMLElement).style.transform =
+                      "translate(0, 0)";
                   }}
-                  onMouseDown={(e) => {
-                    (e.currentTarget as HTMLElement).style.boxShadow = "1px 1px 0px #1A1A1A";
-                    (e.currentTarget as HTMLElement).style.transform = "translate(2px, 2px)";
+                  onMouseDown={e => {
+                    (e.currentTarget as HTMLElement).style.boxShadow =
+                      "1px 1px 0px #1A1A1A";
+                    (e.currentTarget as HTMLElement).style.transform =
+                      "translate(2px, 2px)";
                   }}
                   onClick={() =>
                     toast.success(
@@ -200,7 +243,9 @@ export default function Pricing() {
                     )
                   }
                 >
-                  {plan.price === 0 ? "Get Started Free" : `Start ${plan.name} Trial`}
+                  {plan.price === 0
+                    ? "Get Started Free"
+                    : `Start ${plan.name} Trial`}
                 </button>
               </div>
             </div>
@@ -216,11 +261,14 @@ export default function Pricing() {
             className="text-white font-extrabold text-lg"
             style={{ fontFamily: "Space Grotesk, sans-serif" }}
           >
-            💡 Save 40% with Annual Billing — Pro for just $17/month
+            💡 Save 40% with Annual Billing — Pro for just R17/month
           </p>
           <button
             className="mt-3 bg-white text-[#4A7C59] font-extrabold text-sm px-6 py-2 border-2 border-[#1A1A1A]"
-            style={{ fontFamily: "Space Grotesk, sans-serif", boxShadow: "3px 3px 0px #1A1A1A" }}
+            style={{
+              fontFamily: "Space Grotesk, sans-serif",
+              boxShadow: "3px 3px 0px #1A1A1A",
+            }}
             onClick={() => toast.info("Annual billing coming soon!")}
           >
             Switch to Annual
