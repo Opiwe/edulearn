@@ -6,6 +6,7 @@
 import { useState } from "react";
 import { Link, useLocation } from "wouter";
 import { Menu, X, GraduationCap } from "lucide-react";
+import { toast } from "sonner";
 
 const navLinks = [
   { label: "Courses", href: "/courses" },
@@ -37,12 +38,14 @@ export default function Navbar() {
 
           {/* Desktop Nav */}
           <nav className="hidden md:flex items-center gap-8">
-            {navLinks.map((link) => (
+            {navLinks.map(link => (
               <Link
                 key={link.href}
                 href={link.href}
                 className={`text-sm font-semibold transition-colors duration-150 relative group ${
-                  location === link.href ? "text-[#FF5733]" : "text-[#1A1A1A] hover:text-[#FF5733]"
+                  location === link.href
+                    ? "text-[#FF5733]"
+                    : "text-[#1A1A1A] hover:text-[#FF5733]"
                 }`}
                 style={{ fontFamily: "Space Grotesk, sans-serif" }}
               >
@@ -58,28 +61,20 @@ export default function Navbar() {
 
           {/* Desktop CTA */}
           <div className="hidden md:flex items-center gap-3">
-            <button
+            <Link
+              href="/login"
               className="text-sm font-bold text-[#1A1A1A] px-4 py-2 hover:text-[#FF5733] transition-colors"
               style={{ fontFamily: "Space Grotesk, sans-serif" }}
-              onClick={() => {
-                import("sonner").then(({ toast }) =>
-                  toast.info("Login feature coming soon!")
-                );
-              }}
             >
               Log In
-            </button>
-            <button
+            </Link>
+            <Link
+              href="/signup"
               className="brut-btn bg-[#FF5733] text-white text-sm px-5 py-2 font-bold"
               style={{ fontFamily: "Space Grotesk, sans-serif" }}
-              onClick={() => {
-                import("sonner").then(({ toast }) =>
-                  toast.info("Sign up feature coming soon!")
-                );
-              }}
             >
               Get Started
-            </button>
+            </Link>
           </div>
 
           {/* Mobile toggle */}
@@ -97,7 +92,7 @@ export default function Navbar() {
       {open && (
         <div className="md:hidden border-t-2 border-[#1A1A1A] bg-[#FAFAF5]">
           <nav className="container py-4 flex flex-col gap-4">
-            {navLinks.map((link) => (
+            {navLinks.map(link => (
               <Link
                 key={link.href}
                 href={link.href}
@@ -109,30 +104,22 @@ export default function Navbar() {
               </Link>
             ))}
             <div className="flex flex-col gap-2 pt-2 border-t-2 border-[#1A1A1A]">
-              <button
-                className="text-sm font-bold text-[#1A1A1A] py-2 text-left"
+              <Link
+                href="/login"
+                className="text-sm font-bold text-[#1A1A1A] py-2"
                 style={{ fontFamily: "Space Grotesk, sans-serif" }}
-                onClick={() => {
-                  setOpen(false);
-                  import("sonner").then(({ toast }) =>
-                    toast.info("Login feature coming soon!")
-                  );
-                }}
+                onClick={() => setOpen(false)}
               >
                 Log In
-              </button>
-              <button
-                className="brut-btn bg-[#FF5733] text-white text-sm px-5 py-2 font-bold w-full"
+              </Link>
+              <Link
+                href="/signup"
+                className="brut-btn bg-[#FF5733] text-white text-sm px-5 py-2 font-bold w-full text-center"
                 style={{ fontFamily: "Space Grotesk, sans-serif" }}
-                onClick={() => {
-                  setOpen(false);
-                  import("sonner").then(({ toast }) =>
-                    toast.info("Sign up feature coming soon!")
-                  );
-                }}
+                onClick={() => setOpen(false)}
               >
                 Get Started
-              </button>
+              </Link>
             </div>
           </nav>
         </div>
