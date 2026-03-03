@@ -4,11 +4,25 @@
              Testimonials, Newsletter CTA
    ========================================================================== */
 
-import { ArrowRight, Play, CheckCircle, Star, Users, BookOpen, Award } from "lucide-react";
+import {
+  ArrowRight,
+  Play,
+  CheckCircle,
+  Star,
+  Users,
+  BookOpen,
+  Award,
+} from "lucide-react";
 import { Link } from "wouter";
 import { toast } from "sonner";
 import CourseCard from "@/components/CourseCard";
-import { courses, stats, categories, instructors, testimonials } from "@/lib/data";
+import {
+  courses,
+  stats,
+  categories,
+  instructors,
+  testimonials,
+} from "@/lib/data";
 
 // ─── Hero Section ───────────────────────────────────────────────────────────
 function HeroSection() {
@@ -55,8 +69,15 @@ function HeroSection() {
 
             {/* Trust signals */}
             <div className="mt-6 flex flex-wrap gap-3">
-              {["Lifetime Access", "Certificate Included", "30-Day Guarantee"].map((item) => (
-                <span key={item} className="flex items-center gap-1.5 text-sm font-semibold text-[#1A1A1A]">
+              {[
+                "Lifetime Access",
+                "Certificate Included",
+                "30-Day Guarantee",
+              ].map(item => (
+                <span
+                  key={item}
+                  className="flex items-center gap-1.5 text-sm font-semibold text-[#1A1A1A]"
+                >
                   <CheckCircle className="w-4 h-4 text-[#4A7C59]" />
                   {item}
                 </span>
@@ -104,11 +125,16 @@ function HeroSection() {
               <div>
                 <div className="flex items-center gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star key={i} className="w-3.5 h-3.5 fill-[#FF5733] text-[#FF5733]" />
+                    <Star
+                      key={i}
+                      className="w-3.5 h-3.5 fill-[#FF5733] text-[#FF5733]"
+                    />
                   ))}
                 </div>
                 <p className="text-xs text-gray-500 font-medium">
-                  Trusted by <span className="font-bold text-[#1A1A1A]">50,000+</span> students
+                  Trusted by{" "}
+                  <span className="font-bold text-[#1A1A1A]">50,000+</span>{" "}
+                  students
                 </p>
               </div>
             </div>
@@ -133,10 +159,15 @@ function HeroSection() {
               className="absolute -bottom-6 -left-6 bg-white border-2 border-[#1A1A1A] p-4"
               style={{ boxShadow: "4px 4px 0px #1A1A1A" }}
             >
-              <p className="text-2xl font-extrabold text-[#1A1A1A]" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
+              <p
+                className="text-2xl font-extrabold text-[#1A1A1A]"
+                style={{ fontFamily: "Space Grotesk, sans-serif" }}
+              >
                 200+
               </p>
-              <p className="text-xs text-gray-500 font-medium">Expert Courses</p>
+              <p className="text-xs text-gray-500 font-medium">
+                Expert Courses
+              </p>
             </div>
             {/* Floating rating card */}
             <div
@@ -145,7 +176,12 @@ function HeroSection() {
             >
               <div className="flex items-center gap-1">
                 <Star className="w-4 h-4 fill-white text-white" />
-                <span className="text-lg font-extrabold" style={{ fontFamily: "Space Grotesk, sans-serif" }}>4.9</span>
+                <span
+                  className="text-lg font-extrabold"
+                  style={{ fontFamily: "Space Grotesk, sans-serif" }}
+                >
+                  4.9
+                </span>
               </div>
               <p className="text-xs font-medium opacity-90">Top Rated</p>
             </div>
@@ -179,7 +215,9 @@ function StatsSection() {
                 >
                   {value}
                 </span>
-                <span className="mt-1 text-sm text-gray-400 font-medium">{label}</span>
+                <span className="mt-1 text-sm text-gray-400 font-medium">
+                  {label}
+                </span>
               </div>
             );
           })}
@@ -196,7 +234,9 @@ function CategoriesSection() {
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
           <div>
-            <div className="section-tag text-[#4A7C59] border-[#4A7C59] mb-4">Explore Topics</div>
+            <div className="section-tag text-[#4A7C59] border-[#4A7C59] mb-4">
+              Explore Topics
+            </div>
             <h2
               className="text-4xl lg:text-5xl font-extrabold text-[#1A1A1A] leading-tight"
               style={{ fontFamily: "Space Grotesk, sans-serif" }}
@@ -215,7 +255,7 @@ function CategoriesSection() {
         </div>
 
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-4 stagger-children">
-          {categories.map(({ name, count, icon, color }) => (
+          {categories.map(({ name, count, icon: Icon, color }) => (
             <Link key={name} href="/courses">
               <div
                 className="group bg-white border-2 border-[#1A1A1A] p-5 text-center cursor-pointer"
@@ -223,19 +263,23 @@ function CategoriesSection() {
                   boxShadow: "3px 3px 0px #1A1A1A",
                   transition: "box-shadow 0.15s ease, transform 0.15s ease",
                 }}
-                onMouseEnter={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow = "6px 6px 0px #1A1A1A";
-                  (e.currentTarget as HTMLElement).style.transform = "translate(-3px, -3px)";
+                onMouseEnter={e => {
+                  (e.currentTarget as HTMLElement).style.boxShadow =
+                    "6px 6px 0px #1A1A1A";
+                  (e.currentTarget as HTMLElement).style.transform =
+                    "translate(-3px, -3px)";
                 }}
-                onMouseLeave={(e) => {
-                  (e.currentTarget as HTMLElement).style.boxShadow = "3px 3px 0px #1A1A1A";
-                  (e.currentTarget as HTMLElement).style.transform = "translate(0, 0)";
+                onMouseLeave={e => {
+                  (e.currentTarget as HTMLElement).style.boxShadow =
+                    "3px 3px 0px #1A1A1A";
+                  (e.currentTarget as HTMLElement).style.transform =
+                    "translate(0, 0)";
                 }}
               >
                 <div
-                  className={`w-12 h-12 ${color} border-2 border-[#1A1A1A] flex items-center justify-center text-2xl mx-auto mb-3`}
+                  className={`w-12 h-12 ${color} border-2 border-[#1A1A1A] flex items-center justify-center mx-auto mb-3`}
                 >
-                  {icon}
+                  <Icon className="w-6 h-6 text-white" />
                 </div>
                 <h3
                   className="text-sm font-extrabold text-[#1A1A1A] leading-tight"
@@ -260,7 +304,9 @@ function FeaturedCoursesSection() {
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
           <div>
-            <div className="section-tag text-[#FF5733] border-[#FF5733] mb-4">Top Picks</div>
+            <div className="section-tag text-[#FF5733] border-[#FF5733] mb-4">
+              Top Picks
+            </div>
             <h2
               className="text-4xl lg:text-5xl font-extrabold text-[#1A1A1A] leading-tight"
               style={{ fontFamily: "Space Grotesk, sans-serif" }}
@@ -279,7 +325,7 @@ function FeaturedCoursesSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 stagger-children">
-          {courses.slice(0, 3).map((course) => (
+          {courses.slice(0, 3).map(course => (
             <CourseCard
               key={course.id}
               course={course}
@@ -299,7 +345,9 @@ function InstructorsSection() {
       <div className="container">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-12">
           <div>
-            <div className="section-tag text-[#FF5733] border-[#FF5733] mb-4">Expert Mentors</div>
+            <div className="section-tag text-[#FF5733] border-[#FF5733] mb-4">
+              Expert Mentors
+            </div>
             <h2
               className="text-4xl lg:text-5xl font-extrabold text-white leading-tight"
               style={{ fontFamily: "Space Grotesk, sans-serif" }}
@@ -310,7 +358,10 @@ function InstructorsSection() {
           <Link href="/instructors">
             <button
               className="brut-btn bg-transparent text-white border-white font-bold px-6 py-3 text-sm flex items-center gap-2 whitespace-nowrap"
-              style={{ fontFamily: "Space Grotesk, sans-serif", boxShadow: "4px 4px 0px white" }}
+              style={{
+                fontFamily: "Space Grotesk, sans-serif",
+                boxShadow: "4px 4px 0px white",
+              }}
             >
               All Instructors <ArrowRight className="w-4 h-4" />
             </button>
@@ -318,7 +369,7 @@ function InstructorsSection() {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 stagger-children">
-          {instructors.map((instructor) => (
+          {instructors.map(instructor => (
             <div
               key={instructor.id}
               className="bg-[#2A2A2A] border-2 border-gray-600 p-6 group cursor-pointer"
@@ -326,15 +377,21 @@ function InstructorsSection() {
                 boxShadow: "4px 4px 0px #FF5733",
                 transition: "box-shadow 0.15s ease, transform 0.15s ease",
               }}
-              onMouseEnter={(e) => {
-                (e.currentTarget as HTMLElement).style.boxShadow = "7px 7px 0px #FF5733";
-                (e.currentTarget as HTMLElement).style.transform = "translate(-3px, -3px)";
+              onMouseEnter={e => {
+                (e.currentTarget as HTMLElement).style.boxShadow =
+                  "7px 7px 0px #FF5733";
+                (e.currentTarget as HTMLElement).style.transform =
+                  "translate(-3px, -3px)";
               }}
-              onMouseLeave={(e) => {
-                (e.currentTarget as HTMLElement).style.boxShadow = "4px 4px 0px #FF5733";
-                (e.currentTarget as HTMLElement).style.transform = "translate(0, 0)";
+              onMouseLeave={e => {
+                (e.currentTarget as HTMLElement).style.boxShadow =
+                  "4px 4px 0px #FF5733";
+                (e.currentTarget as HTMLElement).style.transform =
+                  "translate(0, 0)";
               }}
-              onClick={() => toast.info(`Viewing ${instructor.name}'s profile...`)}
+              onClick={() =>
+                toast.info(`Viewing ${instructor.name}'s profile...`)
+              }
             >
               <div className="relative mb-4">
                 <img
@@ -343,7 +400,10 @@ function InstructorsSection() {
                   className="w-20 h-20 object-cover border-2 border-gray-500 group-hover:border-[#FF5733] transition-colors"
                 />
                 <div className="absolute -bottom-2 -right-2 bg-[#FF5733] border-2 border-gray-600 px-2 py-0.5">
-                  <span className="text-xs font-extrabold text-white" style={{ fontFamily: "Space Grotesk, sans-serif" }}>
+                  <span
+                    className="text-xs font-extrabold text-white"
+                    style={{ fontFamily: "Space Grotesk, sans-serif" }}
+                  >
                     {instructor.company}
                   </span>
                 </div>
@@ -373,7 +433,7 @@ function InstructorsSection() {
               </div>
 
               <div className="mt-4 flex flex-wrap gap-1">
-                {instructor.specialties.slice(0, 3).map((s) => (
+                {instructor.specialties.slice(0, 3).map(s => (
                   <span
                     key={s}
                     className="text-xs px-2 py-0.5 border border-gray-600 text-gray-400"
@@ -408,7 +468,7 @@ function TestimonialsSection() {
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 stagger-children">
-          {testimonials.map((t) => (
+          {testimonials.map(t => (
             <div
               key={t.id}
               className="bg-white border-2 border-[#1A1A1A] p-6"
@@ -417,7 +477,10 @@ function TestimonialsSection() {
               {/* Stars */}
               <div className="flex gap-1 mb-4">
                 {Array.from({ length: t.rating }).map((_, i) => (
-                  <Star key={i} className="w-4 h-4 fill-[#FF5733] text-[#FF5733]" />
+                  <Star
+                    key={i}
+                    className="w-4 h-4 fill-[#FF5733] text-[#FF5733]"
+                  />
                 ))}
               </div>
 
@@ -465,7 +528,9 @@ function AboutTeaserSection() {
       <div className="container">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div>
-            <div className="section-tag text-white border-white mb-6">Our Mission</div>
+            <div className="section-tag text-white border-white mb-6">
+              Our Mission
+            </div>
             <h2
               className="text-4xl lg:text-5xl font-extrabold text-white leading-tight"
               style={{ fontFamily: "Space Grotesk, sans-serif" }}
@@ -473,9 +538,10 @@ function AboutTeaserSection() {
               Education Should Be Accessible to Everyone
             </h2>
             <p className="mt-6 text-white/90 text-lg leading-relaxed">
-              We believe that world-class education shouldn't be locked behind expensive degrees.
-              Our platform connects ambitious learners with industry experts who teach real-world skills
-              that employers actually want.
+              We believe that world-class education shouldn't be locked behind
+              expensive degrees. Our platform connects ambitious learners with
+              industry experts who teach real-world skills that employers
+              actually want.
             </p>
             <div className="mt-8 flex flex-wrap gap-4">
               <Link href="/about">
@@ -486,13 +552,17 @@ function AboutTeaserSection() {
                     boxShadow: "4px 4px 0px #1A1A1A",
                     transition: "box-shadow 0.15s ease, transform 0.15s ease",
                   }}
-                  onMouseEnter={(e) => {
-                    (e.currentTarget as HTMLElement).style.boxShadow = "7px 7px 0px #1A1A1A";
-                    (e.currentTarget as HTMLElement).style.transform = "translate(-3px, -3px)";
+                  onMouseEnter={e => {
+                    (e.currentTarget as HTMLElement).style.boxShadow =
+                      "7px 7px 0px #1A1A1A";
+                    (e.currentTarget as HTMLElement).style.transform =
+                      "translate(-3px, -3px)";
                   }}
-                  onMouseLeave={(e) => {
-                    (e.currentTarget as HTMLElement).style.boxShadow = "4px 4px 0px #1A1A1A";
-                    (e.currentTarget as HTMLElement).style.transform = "translate(0, 0)";
+                  onMouseLeave={e => {
+                    (e.currentTarget as HTMLElement).style.boxShadow =
+                      "4px 4px 0px #1A1A1A";
+                    (e.currentTarget as HTMLElement).style.transform =
+                      "translate(0, 0)";
                   }}
                 >
                   Our Story
@@ -535,7 +605,8 @@ function NewsletterSection() {
             Start Learning Today
           </h2>
           <p className="mt-4 text-gray-400 text-lg max-w-xl mx-auto">
-            Get weekly course recommendations, industry insights, and exclusive discounts delivered to your inbox.
+            Get weekly course recommendations, industry insights, and exclusive
+            discounts delivered to your inbox.
           </p>
           <div className="mt-8 flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
             <input
@@ -546,8 +617,13 @@ function NewsletterSection() {
             />
             <button
               className="brut-btn bg-[#FF5733] text-white font-extrabold px-6 py-3 text-sm whitespace-nowrap"
-              style={{ fontFamily: "Space Grotesk, sans-serif", boxShadow: "4px 4px 0px white" }}
-              onClick={() => toast.success("You're subscribed! Welcome to EduLearn.")}
+              style={{
+                fontFamily: "Space Grotesk, sans-serif",
+                boxShadow: "4px 4px 0px white",
+              }}
+              onClick={() =>
+                toast.success("You're subscribed! Welcome to EduLearn.")
+              }
             >
               Subscribe Free
             </button>

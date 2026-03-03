@@ -2,6 +2,14 @@
    EduLearn — Shared Data
    ========================================================================== */
 
+import {
+  Code2,
+  Palette,
+  BarChart3,
+  TrendingUp,
+  Camera,
+  Megaphone,
+} from "lucide-react";
 import type { Course } from "@/components/CourseCard";
 
 export const courses: Course[] = [
@@ -17,7 +25,8 @@ export const courses: Course[] = [
     lessons: 312,
     price: 89,
     originalPrice: 199,
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663399000840/SQJzznbgrbAg6zmjf7uVAN/course-webdev-ikzFo7mGaary8WbQrRYfZM.webp",
+    image:
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663399000840/SQJzznbgrbAg6zmjf7uVAN/course-webdev-ikzFo7mGaary8WbQrRYfZM.webp",
     tag: "Bestseller",
     tagColor: "bg-[#FF5733] text-white",
   },
@@ -33,7 +42,8 @@ export const courses: Course[] = [
     lessons: 224,
     price: 79,
     originalPrice: 179,
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663399000840/SQJzznbgrbAg6zmjf7uVAN/course-design-FJMUE67XAmF8KepJVgfqZo.webp",
+    image:
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663399000840/SQJzznbgrbAg6zmjf7uVAN/course-design-FJMUE67XAmF8KepJVgfqZo.webp",
     tag: "New",
     tagColor: "bg-[#4A7C59] text-white",
   },
@@ -49,7 +59,8 @@ export const courses: Course[] = [
     lessons: 380,
     price: 99,
     originalPrice: 229,
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663399000840/SQJzznbgrbAg6zmjf7uVAN/course-data-Mt9RpoZXkBgkaGUGQfdf7Y.webp",
+    image:
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663399000840/SQJzznbgrbAg6zmjf7uVAN/course-data-Mt9RpoZXkBgkaGUGQfdf7Y.webp",
     tag: "Hot",
     tagColor: "bg-[#1A1A1A] text-white",
   },
@@ -65,7 +76,8 @@ export const courses: Course[] = [
     lessons: 265,
     price: 94,
     originalPrice: 199,
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663399000840/SQJzznbgrbAg6zmjf7uVAN/course-webdev-ikzFo7mGaary8WbQrRYfZM.webp",
+    image:
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663399000840/SQJzznbgrbAg6zmjf7uVAN/course-webdev-ikzFo7mGaary8WbQrRYfZM.webp",
     tag: "Bestseller",
     tagColor: "bg-[#FF5733] text-white",
   },
@@ -81,7 +93,8 @@ export const courses: Course[] = [
     lessons: 168,
     price: 69,
     originalPrice: 149,
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663399000840/SQJzznbgrbAg6zmjf7uVAN/course-design-FJMUE67XAmF8KepJVgfqZo.webp",
+    image:
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663399000840/SQJzznbgrbAg6zmjf7uVAN/course-design-FJMUE67XAmF8KepJVgfqZo.webp",
   },
   {
     id: 6,
@@ -95,7 +108,8 @@ export const courses: Course[] = [
     lessons: 334,
     price: 109,
     originalPrice: 249,
-    image: "https://d2xsxph8kpxj0f.cloudfront.net/310519663399000840/SQJzznbgrbAg6zmjf7uVAN/course-data-Mt9RpoZXkBgkaGUGQfdf7Y.webp",
+    image:
+      "https://d2xsxph8kpxj0f.cloudfront.net/310519663399000840/SQJzznbgrbAg6zmjf7uVAN/course-data-Mt9RpoZXkBgkaGUGQfdf7Y.webp",
     tag: "New",
     tagColor: "bg-[#4A7C59] text-white",
   },
@@ -110,7 +124,8 @@ export const instructors = [
     students: 48320,
     courses: 6,
     rating: 4.9,
-    avatar: "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=200&h=200&fit=crop&crop=face",
     bio: "10+ years building scalable web applications. Passionate about making complex concepts accessible to everyone.",
     specialties: ["React", "Node.js", "TypeScript", "AWS"],
   },
@@ -122,7 +137,8 @@ export const instructors = [
     students: 31450,
     courses: 4,
     rating: 4.8,
-    avatar: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=200&h=200&fit=crop&crop=face",
     bio: "Award-winning designer who has shaped products used by millions. Expert in design systems and user research.",
     specialties: ["Figma", "Design Systems", "UX Research", "Prototyping"],
   },
@@ -134,7 +150,8 @@ export const instructors = [
     students: 39230,
     courses: 5,
     rating: 4.9,
-    avatar: "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=200&h=200&fit=crop&crop=face",
     bio: "PhD in Machine Learning from MIT. Published researcher with a gift for explaining complex AI concepts simply.",
     specialties: ["Python", "TensorFlow", "PyTorch", "Statistics"],
   },
@@ -146,7 +163,8 @@ export const instructors = [
     students: 19200,
     courses: 3,
     rating: 4.9,
-    avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
+    avatar:
+      "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=200&h=200&fit=crop&crop=face",
     bio: "Architect of streaming infrastructure serving 200M+ users. Specializes in performance and scalability.",
     specialties: ["React", "Next.js", "System Design", "Performance"],
   },
@@ -160,12 +178,12 @@ export const stats = [
 ];
 
 export const categories = [
-  { name: "Web Development", count: 68, icon: "💻", color: "bg-[#FF5733]" },
-  { name: "UI/UX Design", count: 42, icon: "🎨", color: "bg-[#4A7C59]" },
-  { name: "Data Science", count: 55, icon: "📊", color: "bg-[#1A1A1A]" },
-  { name: "Business", count: 37, icon: "📈", color: "bg-[#FF5733]" },
-  { name: "Photography", count: 24, icon: "📷", color: "bg-[#4A7C59]" },
-  { name: "Marketing", count: 31, icon: "📣", color: "bg-[#1A1A1A]" },
+  { name: "Web Development", count: 68, icon: Code2, color: "bg-[#FF5733]" },
+  { name: "UI/UX Design", count: 42, icon: Palette, color: "bg-[#4A7C59]" },
+  { name: "Data Science", count: 55, icon: BarChart3, color: "bg-[#1A1A1A]" },
+  { name: "Business", count: 37, icon: TrendingUp, color: "bg-[#FF5733]" },
+  { name: "Photography", count: 24, icon: Camera, color: "bg-[#4A7C59]" },
+  { name: "Marketing", count: 31, icon: Megaphone, color: "bg-[#1A1A1A]" },
 ];
 
 export const testimonials = [
@@ -173,8 +191,10 @@ export const testimonials = [
     id: 1,
     name: "Lucas Fernandez",
     role: "Frontend Developer at Spotify",
-    avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
-    quote: "EduLearn completely transformed my career. I went from zero coding knowledge to landing a job at Spotify in just 8 months. The quality of instruction is unmatched.",
+    avatar:
+      "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop&crop=face",
+    quote:
+      "EduLearn completely transformed my career. I went from zero coding knowledge to landing a job at Spotify in just 8 months. The quality of instruction is unmatched.",
     course: "Complete Web Development Bootcamp",
     rating: 5,
   },
@@ -182,8 +202,10 @@ export const testimonials = [
     id: 2,
     name: "Aisha Patel",
     role: "UX Designer at Microsoft",
-    avatar: "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face",
-    quote: "The UI/UX course was incredibly practical. I built a portfolio of 5 real projects and got hired within 3 months of completing it. Best investment I've ever made.",
+    avatar:
+      "https://images.unsplash.com/photo-1580489944761-15a19d654956?w=100&h=100&fit=crop&crop=face",
+    quote:
+      "The UI/UX course was incredibly practical. I built a portfolio of 5 real projects and got hired within 3 months of completing it. Best investment I've ever made.",
     course: "UI/UX Design Mastery",
     rating: 5,
   },
@@ -191,8 +213,10 @@ export const testimonials = [
     id: 3,
     name: "Marcus Thompson",
     role: "Data Scientist at Tesla",
-    avatar: "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face",
-    quote: "Dr. Sharma's teaching style is exceptional. Complex ML concepts become crystal clear. I now lead a data science team at Tesla — this course was the foundation.",
+    avatar:
+      "https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=100&h=100&fit=crop&crop=face",
+    quote:
+      "Dr. Sharma's teaching style is exceptional. Complex ML concepts become crystal clear. I now lead a data science team at Tesla — this course was the foundation.",
     course: "Data Science & Machine Learning",
     rating: 5,
   },
