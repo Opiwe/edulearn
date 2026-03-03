@@ -17,6 +17,7 @@ import Instructors from "./pages/Instructors";
 import About from "./pages/About";
 import Pricing from "./pages/Pricing";
 import Login from "./pages/Login";
+import Signup from "./pages/Signup";
 import { useEffect } from "react";
 
 // Scroll to top on route change
@@ -41,6 +42,7 @@ function Router() {
           <Route path="/about" component={About} />
           <Route path="/pricing" component={Pricing} />
           <Route path="/login" component={Login} />
+          <Route path="/signup" component={Signup} />
           <Route path="/404" component={NotFound} />
           <Route component={NotFound} />
         </Switch>
