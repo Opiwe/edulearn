@@ -1,0 +1,212 @@
+/* ==========================================================================
+   EduLearn — Kinetic Brutalism Design System
+   Design Movement: Neo-Brutalism with warm, approachable energy
+   Color: Off-white (#FAFAF5) + Coral-orange (#FF5733) + Charcoal (#1A1A1A)
+   Typography: Space Grotesk (headings) + Lato (body)
+   Signature: Hard offset box-shadows, bold borders, tactile interactions
+   ========================================================================== */
+
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+
+  /* EduLearn Custom Tokens */
+  --font-display: "Space Grotesk", sans-serif;
+  --font-body: "Lato", sans-serif;
+  --color-brand: oklch(0.62 0.22 30);       /* Coral-orange #FF5733 */
+  --color-brand-dark: oklch(0.50 0.20 30);  /* Darker coral */
+  --color-sage: oklch(0.52 0.07 145);       /* Sage green #4A7C59 */
+  --color-charcoal: oklch(0.18 0.005 285);  /* Deep charcoal #1A1A1A */
+}
+
+:root {
+  --radius: 0.25rem;
+  --primary: oklch(0.62 0.22 30);
+  --primary-foreground: oklch(0.99 0 0);
+  --background: oklch(0.99 0.005 95);       /* Warm off-white #FAFAF5 */
+  --foreground: oklch(0.18 0.005 285);      /* Deep charcoal */
+  --card: oklch(1 0 0);
+  --card-foreground: oklch(0.18 0.005 285);
+  --popover: oklch(1 0 0);
+  --popover-foreground: oklch(0.18 0.005 285);
+  --secondary: oklch(0.94 0.005 95);
+  --secondary-foreground: oklch(0.18 0.005 285);
+  --muted: oklch(0.94 0.005 95);
+  --muted-foreground: oklch(0.50 0.010 285);
+  --accent: oklch(0.52 0.07 145);           /* Sage green accent */
+  --accent-foreground: oklch(0.99 0 0);
+  --destructive: oklch(0.577 0.245 27.325);
+  --destructive-foreground: oklch(0.985 0 0);
+  --border: oklch(0.18 0.005 285);          /* Hard charcoal borders */
+  --input: oklch(0.85 0.005 95);
+  --ring: oklch(0.62 0.22 30);
+  --chart-1: oklch(0.62 0.22 30);
+  --chart-2: oklch(0.52 0.07 145);
+  --chart-3: oklch(0.18 0.005 285);
+  --chart-4: oklch(0.75 0.15 90);
+  --chart-5: oklch(0.65 0.18 200);
+  --sidebar: oklch(0.18 0.005 285);
+  --sidebar-foreground: oklch(0.99 0 0);
+  --sidebar-primary: oklch(0.62 0.22 30);
+  --sidebar-primary-foreground: oklch(0.99 0 0);
+  --sidebar-accent: oklch(0.30 0.005 285);
+  --sidebar-accent-foreground: oklch(0.99 0 0);
+  --sidebar-border: oklch(0.30 0.005 285);
+  --sidebar-ring: oklch(0.62 0.22 30);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+  body {
+    @apply bg-background text-foreground;
+    font-family: "Lato", sans-serif;
+    font-weight: 400;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+  }
+  button:not(:disabled),
+  [role="button"]:not([aria-disabled="true"]),
+  [type="button"]:not(:disabled),
+  [type="submit"]:not(:disabled),
+  [type="reset"]:not(:disabled),
+  a[href],
+  select:not(:disabled),
+  input[type="checkbox"]:not(:disabled),
+  input[type="radio"]:not(:disabled) {
+    @apply cursor-pointer;
+  }
+}
+
+@layer components {
+  .container {
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  .flex {
+    min-height: 0;
+    min-width: 0;
+  }
+
+  @media (min-width: 640px) {
+    .container {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    .container {
+      padding-left: 2rem;
+      padding-right: 2rem;
+      max-width: 1280px;
+    }
+  }
+
+  /* Brutalist card shadow — hard offset, no blur */
+  .brut-shadow {
+    box-shadow: 4px 4px 0px oklch(0.18 0.005 285);
+    border: 2px solid oklch(0.18 0.005 285);
+    transition: box-shadow 0.15s ease, transform 0.15s ease;
+  }
+  .brut-shadow:hover {
+    box-shadow: 6px 6px 0px oklch(0.18 0.005 285);
+    transform: translate(-2px, -2px);
+  }
+
+  /* Primary brutalist button */
+  .brut-btn {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    border: 2px solid oklch(0.18 0.005 285);
+    box-shadow: 4px 4px 0px oklch(0.18 0.005 285);
+    transition: box-shadow 0.1s ease, transform 0.1s ease;
+  }
+  .brut-btn:hover {
+    box-shadow: 6px 6px 0px oklch(0.18 0.005 285);
+    transform: translate(-2px, -2px);
+  }
+  .brut-btn:active {
+    box-shadow: 1px 1px 0px oklch(0.18 0.005 285);
+    transform: translate(2px, 2px);
+  }
+
+  /* Section label tag */
+  .section-tag {
+    font-family: "Space Grotesk", sans-serif;
+    font-weight: 700;
+    font-size: 0.75rem;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    border: 2px solid currentColor;
+    padding: 0.2rem 0.75rem;
+    display: inline-block;
+  }
+
+  /* Scroll reveal animation */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(24px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .animate-fade-up {
+    animation: fadeUp 0.5s ease forwards;
+  }
+
+  /* Staggered children */
+  .stagger-children > * {
+    opacity: 0;
+    animation: fadeUp 0.5s ease forwards;
+  }
+  .stagger-children > *:nth-child(1) { animation-delay: 0.05s; }
+  .stagger-children > *:nth-child(2) { animation-delay: 0.15s; }
+  .stagger-children > *:nth-child(3) { animation-delay: 0.25s; }
+  .stagger-children > *:nth-child(4) { animation-delay: 0.35s; }
+  .stagger-children > *:nth-child(5) { animation-delay: 0.45s; }
+  .stagger-children > *:nth-child(6) { animation-delay: 0.55s; }
+}
