@@ -9,6 +9,12 @@ import {
   TrendingUp,
   Camera,
   Megaphone,
+  Smartphone,
+  Cloud,
+  Shield,
+  Brain,
+  Video,
+  Music,
 } from "lucide-react";
 import type { Course } from "@/components/CourseCard";
 
@@ -181,9 +187,20 @@ export const categories = [
   { name: "Web Development", count: 68, icon: Code2, color: "bg-[#FF5733]" },
   { name: "UI/UX Design", count: 42, icon: Palette, color: "bg-[#4A7C59]" },
   { name: "Data Science", count: 55, icon: BarChart3, color: "bg-[#1A1A1A]" },
-  { name: "Business", count: 37, icon: TrendingUp, color: "bg-[#FF5733]" },
-  { name: "Photography", count: 24, icon: Camera, color: "bg-[#4A7C59]" },
-  { name: "Marketing", count: 31, icon: Megaphone, color: "bg-[#1A1A1A]" },
+  { name: "Business", count: 37, icon: TrendingUp, color: "bg-[#6B5B95]" },
+  { name: "Photography", count: 24, icon: Camera, color: "bg-[#F7CAC9]" },
+  { name: "Marketing", count: 31, icon: Megaphone, color: "bg-[#92A8D1]" },
+  { name: "Mobile Apps", count: 28, icon: Smartphone, color: "bg-[#88B04B]" },
+  { name: "Cloud Computing", count: 35, icon: Cloud, color: "bg-[#45B8AC]" },
+  { name: "Cybersecurity", count: 19, icon: Shield, color: "bg-[#DD4124]" },
+  {
+    name: "Artificial Intelligence",
+    count: 45,
+    icon: Brain,
+    color: "bg-[#9B2335]",
+  },
+  { name: "Video Editing", count: 22, icon: Video, color: "bg-[#EFC050]" },
+  { name: "Music Production", count: 16, icon: Music, color: "bg-[#5B5EA6]" },
 ];
 
 export const testimonials = [
